@@ -1,0 +1,86 @@
+h1 {
+	position: block;
+	top: 20px;
+	width: 100%;
+	font-size: 70px;
+	font-weight: bold;
+	text-align: center;
+	color: #b3b3b3;
+	color: rgba(255, 2, 2, 0.4);
+	text-shadow: -1px -1px rgba(0, 0, 0, 0.2);
+	-webkit-text-rendering: optimizeLegibility;
+	-moz-text-rendering: optimizeLegibility;
+	-ms-text-rendering: optimizeLegibility;
+	-o-text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+}
+
+body {
+/*background-color: #eee;*/
+background-image: url(corkboard.png);
+}
+.addContainer {
+outline: 1px solid #aaa;
+width: 65%;
+height: 220px;
+background-color: #fff;
+/*float: left;*/
+margin-left:auto;
+margin-right:auto;
+margin-top: 5px;
+margin-bottom: 5px;
+
+}
+.addContainer img {
+float: left;
+margin: 10px;
+width: 30%;
+max-height: 90%;
+}
+.addContainer ul {
+list-style-type: none;
+margin-bottom: 0;
+padding-top: 10px;
+font-family: Baskerville, "Baskerville Old Face", "Goudy Old Style", Garamond, "Times New Roman", serif;
+}
+.bookContainer button {
+float: bottom-right;
+margin: 10px;
+}
+#addAdd label {
+width: 100px;
+margin-right: 10px;
+text-align: right;
+line-height: 25px;
+}
+#addAdd label, #addAdd input {
+display: block;
+margin-bottom: 10px;
+/*float: left;*/
+}
+#addAdd label[for="title"], #addAdd label[for="releaseDate"] {
+clear: both;
+}
+#addAdd button {
+display: block;
+margin: 5px 20px 10px 10px;
+float: right;
+clear: both;
+}
+
+#Adder{
+background-color: #ffffff;
+}
+
+#addAdd div {
+width: 550px;
+}
+#addAdd div:after {
+content: "";
+display: block;
+height: 0;
+visibility: hidden;
+clear: both;
+font-size: 0;
+line-height: 0;
+}

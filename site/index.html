@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Backbone.js Library sample</title>
+		<link rel="stylesheet" href="css/screen.css">
+	</head>
+	<body>
+		<script id="addTemplate" type="text/template">
+			<img src="<%= coverImagePath %>"/>
+			<ul>
+				<li><%= title %></li>
+				<li><%= authorId %></li>
+				<li><%= description %></li>
+				<li><%= price %></li>
+				<li><%= $.format.date( new Date( releaseDate ), 'dd MMMM yyyy' ) %></li>
+				<li><% _.each( keywords, function( keyobj ) {%>
+					<%= keyobj.keyword %><% } ); %></li>
+			</ul>
+			<button class="delete">Delete</button>
+		</script>
+		
+		<link rel="stylesheet" href="js/themes/jquery-ui.min.css" />
+		<script src="js/lib/jquery.min.js"></script>
+		<script src="js/lib/jquery-ui.min.js"></script>
+		<script src="js/lib/underscore-min.js"></script>
+		<script src="js/lib/backbone-min.js"></script>
+		<script src="js/lib/jquery-dateFormat.js"></script>
+		<script src="js/lib/jquery.form.js"></script>
+		<script src="js/models/add.js"></script>
+		<script src="js/collections/addList.js"></script>
+		<script src="js/views/add.js"></script>
+		<script src="js/views/addList.js"></script>
+		<script src="js/app.js"></script>
+			
+		<div id="adds">
+		   
+			<div id="Adder">
+				<form id="uploadForm"
+					enctype="multipart/form-data"
+					action="/api/photos"
+					method="post">
+					<div>
+					<label for="userPhotoInput">Image: </label>
+					<input type="file" id="userPhotoInput" name="userPhoto" />
+					</div>
+				</form>
+				<span id="status"></span>
+				
+				<div id="uploadedImage"> 
+				</div>
+			
+				<form id="addAdd" action="#">
+					<div>
+						<input id="coverImagePath" type="hidden" />
+						<label for="title">Title: </label><input id="title" type="text" />
+						<label for="authorId">AuthorId: </label><input id="authorId" type="text" />
+						<label for="description">Description: </label><input id="description" type="text" />
+						<label for="price">Price: </label><input id="price" type="text" />
+						<label for="releaseDate">Release date: </label>
+						<input id="releaseDate" type="text" />
+						<label for="keywords">Keywords: </label>
+						<input id="keywords" type="text" />
+						<button id="add">Add</button>
+					</div>
+				</form>
+			</div>
+		</div>
+
+	</body>
+</html>
